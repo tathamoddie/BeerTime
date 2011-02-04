@@ -7,10 +7,21 @@ namespace BeerTime.WebUI.Controllers
 {
     public class BeerController : Controller
     {
-        static Dictionary<int, string> _mappings
-            = new Dictionary<int, string>
+        private static readonly Dictionary<double, IEnumerable<string>> Mappings
+            = new Dictionary<double, IEnumerable<string>>
                   {
-                      { 10, "Sydney" }
+                      { -12, new[]{ "Middle of the ocean" } },
+                      { -11, new[] { "Samoa" } },
+                      { -10, new[] { "Hawaii" } },
+                      { -9, new[] { "Alaska" } },
+                      { -8, new[] { "Los Angeles", "Hotel California" } },
+                      { -7, new[] { "Arizona" } },
+                      {-6, new[] {"Guadalajara"}},
+                      {-5, new[] {"Indiana"}},
+                      {-4.5, new[] {"Caracas"}},
+
+
+                      { 10, new[] { "Sydney" } }
                   };
 
         public ActionResult FindNoon()
@@ -32,9 +43,19 @@ namespace BeerTime.WebUI.Controllers
                 .First();
 
             var hours = result.GetUtcOffset(utcNow).Hours;
-            ViewBag.CityName = _mappings.ContainsKey(hours) ? _mappings[hours] : result.DisplayName;
+            ViewBag.CityName = FindRandomLocation(hours, result.DisplayName);
 
             return View();
+        }
+
+        private static string FindRandomLocation(int hours, string defaultValue)
+        {
+            if (!Mappings.ContainsKey(hours))
+            {
+                return defaultValue;
+            }
+
+            return Mappings[hours].First();
         }
     }
 }
