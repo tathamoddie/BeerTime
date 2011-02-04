@@ -7,12 +7,11 @@ namespace BeerTime.WebUI
     {
         public override void ExecuteResult(ControllerContext context)
         {
-            if (context.RequestContext.HttpContext.Request.AcceptTypes.Any(x => x == "application/json"))
-                new JsonResult {Data = context.Controller.ViewData}.ExecuteResult(context);
+            var acceptTypes = context.RequestContext.HttpContext.Request.AcceptTypes;
+            if (acceptTypes != null && acceptTypes.All(x => x == "application/json"))
+                new JsonResult {Data = context.Controller.ViewData.Model, JsonRequestBehavior = JsonRequestBehavior.AllowGet}.ExecuteResult(context);
             else
-            {
                 new ViewResult {ViewData = context.Controller.ViewData}.ExecuteResult(context);
-            }
         }
     }
 }

@@ -59,8 +59,7 @@ namespace BeerTime.WebUI.Controllers
                                  {
                                      LocationName = locationName
                                  };
-            return View();
-            //return new DynamicActionResult();
+            return new DynamicActionResult();
         }
 
         private static TimeZoneInfo FindTimeZoneInfo(DateTime utcNow)
