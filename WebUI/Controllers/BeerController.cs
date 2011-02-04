@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Web.Mvc;
 
@@ -6,6 +7,12 @@ namespace BeerTime.WebUI.Controllers
 {
     public class BeerController : Controller
     {
+        static Dictionary<int, string> _mappings
+            = new Dictionary<int, string>
+                  {
+                      { 10, "Sydney" }
+                  };
+
         public ActionResult FindNoon()
         {
             var utcNow = DateTime.UtcNow;
@@ -24,7 +31,8 @@ namespace BeerTime.WebUI.Controllers
                 .Select(t => t.TimeZone)
                 .First();
 
-            ViewData["CityName"] = result.DisplayName;
+            var hours = result.GetUtcOffset(utcNow).Hours;
+            ViewBag.CityName = _mappings.ContainsKey(hours) ? _mappings[hours] : result.DisplayName;
 
             return View();
         }
