@@ -1,8 +1,57 @@
 ﻿<!doctype html>
 <html>
     <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
         <title>Is It Beer Time?</title>
-        <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
+        <style type="text/css">
+            * { margin: 0; padding: 0; }
+
+            body
+            {
+                font-family: Helvetica, Arial, sans-serif;
+                font-size: 16px;
+                line-height: 1.75;
+                color: #111;
+            }
+
+            #beer-justification
+            {
+                position: absolute;
+                top: 50%;
+                margin: -100px 0 0 0;
+                width: 100%;
+                height: 200px;
+                text-align: center;
+            }
+
+            #beer-justification h1
+            {
+                font-size: 800%;
+                line-height: 1;
+            }
+
+            #beer-justification p
+            {
+                font-size: 130%;
+            }
+
+            footer
+            {
+                display: block;
+                position: absolute;
+                bottom: 5px;
+                width: 100%;
+                text-align: center;
+                font-size: 11px;
+                color: #777;
+                text-transform: uppercase;
+            }
+
+            footer a:link, footer a:active, footer a:visited
+            {
+                color: #777;
+            }
+        </style>
     </head>
     <body>
         @RenderBody()
@@ -18,7 +67,7 @@
         <script type='text/javascript'> 
             //<![CDATA[
             var _gaq = _gaq || [];
-            _gaq.push(['_setAccount', 'UA-9207152-3']);
+            _gaq.push(['_setAccount', 'UA-9207152-4']);
             _gaq.push(['_trackPageview']);
             (function () {
                 var ga = document.createElement('script');
