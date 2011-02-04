@@ -59,6 +59,7 @@
   <ItemGroup>
     <Compile Include="Controllers\BeerController.cs" />
     <Compile Include="DynamicActionResult.cs" />
+    <Compile Include="EnumerableExtensions.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
