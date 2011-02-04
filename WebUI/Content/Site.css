@@ -1,82 +1,41 @@
-/* ------------------------------ *
- * Reset Reloaded (by Eric Meyer) *
- * ------------------------------ */
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td
-{
-    margin: 0;
-    padding: 0;
-    border: 0;
-    outline: 0;
-    font-weight: inherit;
-    font-style: inherit;
-    font-size: 100%;
-    font-family: inherit;
-    vertical-align: baseline;
-}
-body
-{
-    line-height: 1;
-    color: black;
-    background: white;
-}
-ol, ul
-{
-    list-style: none;
-}
-table
-{
-    border-collapse: separate;
-    border-spacing: 0;
-}
-caption, th, td
-{
-    text-align: left;
-    font-weight: normal;
-}
-blockquote:before, blockquote:after, q:before, q:after
-{
-    content: "";
-}
-blockquote, q
-{
-    quotes: "" "";
-}
-
-
-
-html
-{
-    margin: 20px;
-}
+* { margin: 0; padding: 0; }
 
 body
 {
-    width: 778px;
-    margin: 0 auto;
-    padding: 15px 40px;
     font-family: Helvetica, Arial, sans-serif;
     font-size: 16px;
     line-height: 1.75;
     color: #111;
 }
 
-section, header, article, footer
+#beer-justification
 {
-    display: block;
+    position: absolute;
+    top: 50%;
+    margin: -100px 0 0 0;
+    width: 100%;
+    height: 200px;
+    text-align: center;
 }
 
-h1
+#beer-justification h1
 {
-    font-family: Georgia, Times, serif;
-    font-size: 32px;
-    color: #B5880D;
+    font-size: 800%;
+    line-height: 1;
+}
+
+#beer-justification p
+{
+    font-size: 130%;
 }
 
 footer
 {
-    margin: 50px 0 30px;
-    padding-top: 50px;
-    border-top: 1px solid #CCC;
+    display: block;
+    position: absolute;
+    bottom: 5px;
+    width: 100%;
+    text-align: center;
     font-size: 11px;
     color: #777;
     text-transform: uppercase;
