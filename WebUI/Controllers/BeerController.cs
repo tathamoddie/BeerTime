@@ -24,11 +24,22 @@ namespace BeerTime.WebUI.Controllers
                       { 10, new[] { "Sydney" } }
                   };
 
+        [HttpGet]
         public ActionResult FindNoon()
         {
             var utcNow = DateTime.UtcNow;
 
-            var result = TimeZoneInfo
+            var result = FindTimeZoneInfo(utcNow);
+
+            var hours = result.GetUtcOffset(utcNow).Hours;
+            ViewBag.CityName = FindRandomLocation(hours, result.DisplayName);
+
+            return View();
+        }
+
+        private static TimeZoneInfo FindTimeZoneInfo(DateTime utcNow)
+        {
+            return TimeZoneInfo
                 .GetSystemTimeZones()
                 .Select(tz => new
                 {
@@ -41,11 +52,6 @@ namespace BeerTime.WebUI.Controllers
                 .ThenBy(t => t.TimeZone.StandardName)
                 .Select(t => t.TimeZone)
                 .First();
-
-            var hours = result.GetUtcOffset(utcNow).Hours;
-            ViewBag.CityName = FindRandomLocation(hours, result.DisplayName);
-
-            return View();
         }
 
         private static string FindRandomLocation(int hours, string defaultValue)
