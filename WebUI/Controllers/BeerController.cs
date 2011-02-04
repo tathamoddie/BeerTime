@@ -6,7 +6,7 @@ namespace BeerTime.WebUI.Controllers
 {
     public class BeerController : Controller
     {
-        public string FindNoon()
+        public ActionResult FindNoon()
         {
             var utcNow = DateTime.UtcNow;
 
@@ -24,7 +24,9 @@ namespace BeerTime.WebUI.Controllers
                 .Select(t => t.TimeZone)
                 .First();
 
-            return result.DisplayName;
+            ViewData["CityName"] = result.DisplayName;
+
+            return View();
         }
     }
 }
