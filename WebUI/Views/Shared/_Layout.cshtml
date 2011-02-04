@@ -1,62 +1,71 @@
 ﻿<!doctype html>
 <html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-        <title>Is It Beer Time?</title>
-        <style type="text/css">
-            * { margin: 0; padding: 0; }
-
-            body
-            {
-                font-family: Helvetica, Arial, sans-serif;
-                font-size: 16px;
-                line-height: 1.75;
-                color: #111;
-            }
-
-            #beer-justification
-            {
-                position: absolute;
-                top: 50%;
-                margin: -100px 0 0 0;
-                width: 100%;
-                height: 200px;
-                text-align: center;
-            }
-
-            #beer-justification h1
-            {
-                font-size: 800%;
-                line-height: 1;
-                text-shadow: #ccc 2px 2px 2px;
-            }
-
-            #beer-justification p
-            {
-                font-size: 130%;
-            }
-
-            footer
-            {
-                display: block;
-                position: absolute;
-                bottom: 5px;
-                width: 100%;
-                text-align: center;
-                font-size: 11px;
-                color: #777;
-                text-transform: uppercase;
-            }
-
-            footer a:link, footer a:active, footer a:visited
-            {
-                color: #777;
-            }
-        </style>
-    </head>
-    <body>
-        @RenderBody()
-        <footer>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <!--[if lte IE 8]>
+    <script type='text/javascript'> 
+        document.createElement('footer'); document.createElement('header');
+    </script> 
+    <![endif]-->
+    <title>Is It Beer Time?</title>
+    <style type="text/css">
+        *
+        {
+            margin: 0;
+            padding: 0;
+        }
+        
+        body
+        {
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 16px;
+            line-height: 1.75;
+            color: #111;
+        }
+        
+        #beer-justification
+        {
+            position: absolute;
+            top: 50%;
+            margin: -100px 0 0 0;
+            width: 100%;
+            height: 200px;
+            text-align: center;
+        }
+        
+        #beer-justification h1
+        {
+            font-size: 800%;
+            line-height: 1;
+            text-shadow: #ccc 2px 2px 2px;
+        }
+        
+        #beer-justification p
+        {
+            font-size: 130%;
+        }
+        
+        footer
+        {
+            display: block;
+            position: absolute;
+            bottom: 5px;
+            width: 100%;
+            text-align: center;
+            font-size: 11px;
+            color: #777;
+            text-transform: uppercase;
+        }
+        
+        footer a:link, footer a:active, footer a:visited
+        {
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    @RenderBody()
+    <footer>
             An
             <a href="http://www.asp.net/mvc">ASP.NET MVC 3</a> +
             <a href="http://weblogs.asp.net/scottgu/archive/2010/07/02/introducing-razor.aspx">Razor</a> +
@@ -65,18 +74,18 @@
             <a href="http://aaron-powell.com">Aaron Powell</a> and
             <a href="http://tath.am">Tatham Oddie</a>.
         </footer>
-        <script type='text/javascript'> 
+    <script type='text/javascript'> 
             //<![CDATA[
-            var _gaq = _gaq || [];
-            _gaq.push(['_setAccount', 'UA-9207152-4']);
-            _gaq.push(['_trackPageview']);
-            (function () {
-                var ga = document.createElement('script');
-                ga.type = 'text/javascript'; ga.async = true;
-                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-            })();
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-9207152-4']);
+        _gaq.push(['_trackPageview']);
+        (function () {
+            var ga = document.createElement('script');
+            ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
             //]]>
-        </script>
-    </body>
+    </script>
+</body>
 </html>
