@@ -95,5 +95,8 @@
         })();
             //]]>
     </script>
+    @if (IsSectionDefined("Scripts")) { 
+        @RenderSection("Scripts");
+    }
 </body>
 </html>
