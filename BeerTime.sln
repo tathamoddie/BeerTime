@@ -1,7 +1,9 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebUI", "WebUI\WebUI.csproj", "{F732DCD5-FD11-4C24-A813-26ECF8E1D136}"
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34029.424
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeerTime", "BeerTime\BeerTime.csproj", "{DFF727B5-BA2E-410D-B918-1BD8F6611363}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,12 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{F732DCD5-FD11-4C24-A813-26ECF8E1D136}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F732DCD5-FD11-4C24-A813-26ECF8E1D136}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F732DCD5-FD11-4C24-A813-26ECF8E1D136}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F732DCD5-FD11-4C24-A813-26ECF8E1D136}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DFF727B5-BA2E-410D-B918-1BD8F6611363}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFF727B5-BA2E-410D-B918-1BD8F6611363}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFF727B5-BA2E-410D-B918-1BD8F6611363}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFF727B5-BA2E-410D-B918-1BD8F6611363}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1D9E2410-378A-4D7F-BC96-1BAF34571DE9}
 	EndGlobalSection
 EndGlobal
